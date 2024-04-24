@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"   href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Busqueda</title>
+</head>
+<body>
+    <div id="Title">
+        <h1>Search of words in the txt files</h1>
+    </div>
+    
+    <div class="wrap">
+        <div class="search">
+            <input type="text" id="keyword" class="searchTerm" placeholder="Word Search">
+            <button type="button" class="searchButton" onclick="search()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        function search() {
+            var keyword = document.getElementById('keyword').value;
+
+            var directory = 'libros';
+
+            document.getElementById('results').innerHTML = '';
+
+            fetch('/search?keyword=' + keyword)
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(result => {
+                        var resultElement = document.createElement('div');
+                        resultElement.innerHTML = '<h3>' + result.filename + '</h3><p>Number of times found: ' + result.occurrences + '</p><p>' + result.keywords + '</p>';
+                        document.getElementById('results').appendChild(resultElement);
+                    });
+                })
+                .catch(error => console.error('word not found:', error));
+        }
+    </script>
+</body>
+</html>
