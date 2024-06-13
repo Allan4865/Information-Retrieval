@@ -1,0 +1,1 @@
+geotherm resourc intern ltgeo year oper shr 123 dlr 185 dlr oper shr dilut 123 dlr 179 dlr oper net 6799000 9321000 rev 7474000 124 mln avg shr 4503000 4350000 avg shr dilut 4508000 5206000 note net exclud gain discontinu oper 386000 dlr 903000 dlr 1986 year net exclud gain 1910000 dlr sale discontinu oper net includ tax credit 9450000 dlr 119 mln dlr

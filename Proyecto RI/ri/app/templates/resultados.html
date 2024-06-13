@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de búsqueda</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Resultados de búsqueda</h1>
+    </div>
+    <div class="container">
+        <h2>Resultados con Bag of Words:</h2>
+        <ul>
+            {% for result in results_bow %}
+            <li>Documento: {{ result }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Resultados con TF-IDF:</h2>
+        <ul>
+            {% for result in results_tfidf %}
+            <li>Documento: {{ result }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="btn btn-primary">Nueva búsqueda</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

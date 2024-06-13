@@ -1,0 +1,1 @@
+accept insur hold ltacpt year oper shr profit 180 dlr loss 228 dlr oper net profit 20480000 loss 1318000 rev 254 mln 123 mln avg shr 1135000 576000 note net exclud realiz invest gain 40000 dlr 13000 dlr 1986 net exclud 729000 dlr tax credit
